@@ -1,6 +1,7 @@
 'use strict'
 
 var $header = document.querySelector('.header')
+var $links = document.querySelectorAll('.navigation__item')
 
 var throttle = function (callback, delay) {
   var last = null
@@ -31,3 +32,10 @@ var scrollHandler = function () {
 }
 
 window.addEventListener('scroll', throttle(scrollHandler, 25))
+
+$links.forEach(function (element) {
+  element.addEventListener('click', function () {
+    $links.forEach(function (element) { element.classList.remove('is-active') })
+    element.classList.add('is-active')
+  })
+})

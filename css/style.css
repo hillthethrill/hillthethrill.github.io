@@ -67,7 +67,7 @@ h1 {
   text-decoration: none;
 }
 
-.navigation .active-header {
+.navigation .is-active {
   background-color: #000;
   color: #fff;
   padding-left: 1em;
