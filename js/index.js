@@ -1,34 +1,33 @@
-'use strict';
+'use strict'
 
-function throttle(fn, delay) {
-  var last = undefined;
-  var timer = undefined;
+var $header = document.querySelector('.header')
+
+var throttle = function (callback, delay) {
+  var last = null
+  var timer = null
 
   return function () {
-    var now = +new Date();
+    var now = +new Date()
 
     if (last && now < last + delay) {
-      clearTimeout(timer);
-
-      timer = setTimeout(function () {
-        last = now;
-        fn();
-      }, delay);
+      window.clearTimeout(timer)
+      timer = window.setTimeout(function () {
+        last = now
+        callback()
+      }, delay)
     } else {
-      last = now;
-      fn();
+      last = now
+      callback()
     }
-  };
-}
-
-function onScroll() {
-  if (window.pageYOffset) {
-    $$header.classList.add('is-active');
-  } else {
-    $$header.classList.remove('is-active');
   }
 }
 
-var $$header = document.querySelector('.js-header');
+var scrollHandler = function () {
+  if (window.pageYOffset) {
+    $header.classList.add('active-header')
+  } else {
+    $header.classList.remove('active-header')
+  }
+}
 
-window.addEventListener('scroll', throttle(onScroll, 25));
+window.addEventListener('scroll', throttle(scrollHandler, 25))
