@@ -28,7 +28,7 @@ body {
 }
 
 .header {
-  background-color: #fff;
+  background-color: #FFFFFF;
   padding-bottom: 1em;
   padding-top: 1em;
 }
@@ -68,8 +68,8 @@ h1 {
 }
 
 .navigation .is-active {
-  background-color: #000;
-  color: #fff;
+  background-color: #B76E79;
+  color: #FFFFFF;
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 999px;
