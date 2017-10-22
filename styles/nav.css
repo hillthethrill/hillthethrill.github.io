@@ -8,6 +8,10 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  /* Color */
+  background-color: none;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* Underline */
@@ -18,8 +22,8 @@ nav::after {
 
   /* Position */
   margin: 0 auto;
-  position: relative;
-  top: 35px;
+  position: absolute;
+  top: 60px;
 
   /* Display */
   display: block;
@@ -27,7 +31,28 @@ nav::after {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-nav > div:nth-child(1) {
+nav > div {
+  cursor: pointer;
+
+  /* Animation */
+  -webkit-transition: color 200ms ease 0ms;
+  -moz-transition: color 200ms ease 0ms;
+  transition: color 200ms ease 0ms;
+}
+
+nav > div:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+nav > div:first-child {
   margin-right: auto;
   margin-left: 5%;
+}
+
+nav > div[link] {
+  margin-left: 15px;
+}
+
+nav > div:last-child {
+  margin-right: 5%;
 }
