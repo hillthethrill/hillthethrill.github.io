@@ -19,6 +19,7 @@ header {
 header > main {
   /* Sizing */
   width: 100%;
+  height: calc(90% - 70px);
 
   /* Flex properties */
   display: flex;
@@ -31,6 +32,7 @@ header > main > div[right] {
   /* Sizing */
   width: 50%;
   min-width: 300px;
+  height: 100%;
 
   /* Flex properties */
   display: flex;
@@ -42,6 +44,7 @@ header > main > div[right] {
 header > main > div[left] {
   /* Sizing */
   width: 50%;
+  height: 100%;
 
   /* Flex properties */
   display: flex;
@@ -51,4 +54,9 @@ header > main > div[left] {
 
   /* Position */
   margin-right: auto;
+}
+
+header > main > div[right] > p {
+  max-width: 400px;
+  color: rgba(255, 255, 255, 0.65);
 }
