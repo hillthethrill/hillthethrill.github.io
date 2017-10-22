@@ -8,6 +8,12 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  /* Backgound with fallback */
+  background-color: #321752;
+  background-image: -webkit-radial-gradient(circle at top, #6F2A9E, #321752);
+  background-image: -moz-radial-gradient(circle at top, #6F2A9E, #321752);
+  background-image: radial-gradient(circle at top, #6F2A9E, #321752);
 }
 
 header > main {
@@ -25,8 +31,6 @@ header > main > div[right] {
   /* Sizing */
   width: 50%;
   min-width: 300px;
-  height: 200px;
-  background-color: red;
 
   /* Flex properties */
   display: flex;
@@ -38,8 +42,6 @@ header > main > div[right] {
 header > main > div[left] {
   /* Sizing */
   width: 50%;
-  height: 200px;
-  background-color: blue;
 
   /* Flex properties */
   display: flex;
