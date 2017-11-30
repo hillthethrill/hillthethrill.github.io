@@ -1,0 +1,11 @@
+.ribbon {
+  position: absolute;
+  right: -175px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  transform-origin: top center;
+  transform: skewX(-45deg);
+  background-color: #EFEFFF;
+  z-index: 1;
+}

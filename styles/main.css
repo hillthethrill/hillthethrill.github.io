@@ -1,7 +1,7 @@
 main {
   width: 100%;
   height: 100%;
-  background: linear-gradient(125deg, #F0F0F0 70%, #FF6A96 70%);
+  background: linear-gradient(135deg, #F0F0F0 70%, #FF6A96 70%);
 
   display: flex;
   flex-direction: column;
